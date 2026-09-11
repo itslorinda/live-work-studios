@@ -145,22 +145,6 @@ img { max-width: 100%; display: block; }
 
 .hero-pillars .label { font-weight: 600; font-size: 15px; color: var(--navy); }
 
-<section class="manifesto">
-  <div class="wrap" style="display:flex; align-items:center; gap:40px; flex-wrap:wrap;">
-    <img src="kickstand-icon.svg" alt="" style="width:70px; color: var(--cream); flex-shrink:0;">
-    <div>
-      <p class="tag">Good spaces support great lives.</p>
-      <h2>Design for a more grounded tomorrow.</h2>
-      <ul>
-        <li>Homes</li>
-        <li>Workplaces</li>
-        <li>Gathering Spaces</li>
-        <li>Stronger Lives</li>
-      </ul>
-    </div>
-  </div>
-</section>
-
 /* ---------- Page header (non-home pages) ---------- */
 
 .page-header {
