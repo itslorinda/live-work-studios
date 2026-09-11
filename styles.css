@@ -63,7 +63,7 @@ img { max-width: 100%; display: block; }
 .brand {
   font-family: var(--heading);
   font-weight: 700;
-  font-size: 17px;
+  font-size: 20px;
   letter-spacing: 0.1em;
   text-transform: uppercase;
   color: var(--navy);
@@ -74,11 +74,14 @@ img { max-width: 100%; display: block; }
 .brand span {
   display: block;
   font-weight: 500;
-  font-size: 10px;
+  font-size: 15px;
   letter-spacing: 0.16em;
   color: var(--charcoal);
 }
 
+.brand { display: flex; align-items: center; gap: 10px; }
+.brand-icon { width: 28px; height: auto; color: var(--navy); }
+.brand-text { display: flex; flex-direction: column; }
 .site-nav { display: flex; gap: 26px; font-family: var(--heading); font-size: 13px; font-weight: 600; letter-spacing: 0.02em; flex-wrap: wrap; }
 .site-nav a { color: var(--charcoal); border: none; }
 .site-nav a:hover, .site-nav a[aria-current="page"] { color: var(--navy); }
@@ -102,7 +105,7 @@ img { max-width: 100%; display: block; }
 .hero h1 {
   font-family: var(--heading);
   font-weight: 700;
-  font-size: clamp(36px, 5.6vw, 58px);
+  font-size: clamp(30px, 4vw, 44px);
   line-height: 1.08;
   letter-spacing: -0.01em;
   color: var(--navy);
@@ -141,6 +144,22 @@ img { max-width: 100%; display: block; }
 }
 
 .hero-pillars .label { font-weight: 600; font-size: 15px; color: var(--navy); }
+
+<section class="manifesto">
+  <div class="wrap" style="display:flex; align-items:center; gap:40px; flex-wrap:wrap;">
+    <img src="kickstand-icon.svg" alt="" style="width:70px; color: var(--cream); flex-shrink:0;">
+    <div>
+      <p class="tag">Good spaces support great lives.</p>
+      <h2>Design for a more grounded tomorrow.</h2>
+      <ul>
+        <li>Homes</li>
+        <li>Workplaces</li>
+        <li>Gathering Spaces</li>
+        <li>Stronger Lives</li>
+      </ul>
+    </div>
+  </div>
+</section>
 
 /* ---------- Page header (non-home pages) ---------- */
 
