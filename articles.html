@@ -29,6 +29,31 @@
     </div>
   </header>
 
+  <!--
+    TODO (email capture): this banner is a placeholder. When ready, connect
+    the form below to a real email service (Mailchimp, ConvertKit, Substack,
+    etc). That means:
+      1. Create a free account with whichever service you choose
+      2. Create a signup form/audience there — it gives you a form "action"
+         URL and field names
+      3. Replace the <form> tag's action="#" below with that URL, and match
+         the <input name="..."> to what the service expects
+    Until that's done, this form won't actually collect emails anywhere.
+  -->
+  <section class="section" style="padding: 40px 0; border-bottom: 1px solid var(--line); background: var(--stone);">
+    <div class="wrap" style="display:flex; align-items:center; justify-content:space-between; gap:20px; flex-wrap:wrap;">
+      <div>
+        <h2 style="font-family: var(--heading); font-size: 20px; color: var(--navy); margin: 0 0 6px;">Get new articles by email</h2>
+        <p style="margin:0; font-size:15px;">One email when we publish something new. No spam.</p>
+      </div>
+      <form action="#" method="post" style="display:flex; gap:10px; flex-wrap:wrap;">
+        <input type="email" name="email" placeholder="you@email.com" required
+          style="font-family: var(--body); font-size:15px; padding:12px 14px; border:1px solid var(--line); min-width:220px;">
+        <button type="submit" class="buy-btn" style="border:1px solid var(--navy); cursor:pointer;">Join the list</button>
+      </form>
+    </div>
+  </section>
+
   <section class="section">
     <div class="wrap">
       <div class="card-grid">

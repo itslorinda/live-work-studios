@@ -11,6 +11,7 @@ A free, static site: five main pages, a set of affiliate-linked articles, and tw
 - `articles/built-in-workshop.html` — sample article
 - `art-store.html` — original art for sale (currently shows "Art designs in progress") — **not linked in navigation yet**, only reachable by its direct URL
 - `lamp-store.html` — lamps for sale (currently shows "Lighting designs in progress") — **not linked in navigation yet**, only reachable by its direct URL
+- `curations.html` — curated, affiliate-linked product roundups (currently shows "Curations in progress") — **not linked in navigation yet**, only reachable by its direct URL
 - `styles.css` — shared styling for every page
 
 ## Publishing to GitHub Pages (free)
@@ -32,6 +33,7 @@ When a store is ready, add its line back inside the `<nav class="site-nav">` blo
 ```html
 <a href="art-store.html">Art Store</a>
 <a href="lamp-store.html">Lamp Store</a>
+<a href="curations.html">Curations</a>
 ```
 
 Place each wherever you want it to sit in the menu order. You'll also want to add the matching card back to the "Explore Kickstand" section on `index.html`.
