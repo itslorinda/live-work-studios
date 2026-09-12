@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kickstand Design Company — Preview</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root {
+  --navy:#0F2D4B; --cream:#F7F3EA; --stone:#D6D6D1; --charcoal:#4A4A4A;
+  --line: rgba(15,45,75,0.16);
+  --heading: "Plus Jakarta Sans", sans-serif;
+  --body: "Inter", sans-serif;
+}
+* { box-sizing: border-box; }
+body { margin:0; background:var(--cream); color:var(--charcoal); font-family:var(--body); font-size:17px; line-height:1.6; }
+.wrap { max-width:1120px; margin:0 auto; padding:0 clamp(20px,5vw,64px); }
+a { color:var(--navy); }
+
+.site-header { border-bottom:1px solid var(--line); padding:40px 0; }
+.site-header .wrap { display:flex; align-items:center; justify-content:space-between; gap:24px; flex-wrap:wrap; }
+.brand { display:flex; align-items:center; gap:14px; text-decoration:none; }
+.brand-icon { width:auto; height:59px; color:var(--navy); }
+.brand-text { font-family:var(--heading); font-weight:700; font-size:34px; letter-spacing:0.06em; text-transform:uppercase; color:var(--navy); line-height:1.15; }
+.brand-sub { display:block; margin-top:6px; font-weight:500; font-size:13px; letter-spacing:0.13em; text-transform:none; color:var(--charcoal); }
+.site-nav { display:flex; gap:24px; font-family:var(--heading); font-size:13px; font-weight:600; }
+.site-nav a { color:var(--charcoal); text-decoration:none; }
+.site-nav a:hover { color:var(--navy); }
+
+.hero { padding:36px 0 56px; border-bottom:1px solid var(--line); }
+.eyebrow { font-family:var(--heading); font-size:16px; letter-spacing:0; text-transform:none; color:var(--charcoal); margin:0 0 16px; max-width:60ch; }
+.hero h1 { font-family:var(--heading); font-weight:700; font-size:clamp(20px,2.1vw,26px); line-height:1.45; color:var(--navy); margin:0 0 18px; max-width:100%; text-align:justify; text-justify:inter-word; }
+.hero p.lede { font-size:18px; max-width:52ch; margin:0 0 32px; }
+.pillars { display:grid; grid-template-columns:repeat(3,1fr); border-top:1px solid var(--line); margin-top:32px; }
+.pillars div { padding:16px 20px 0; border-left:1px solid var(--line); font-family:var(--heading); }
+.pillars div:first-child { border-left:none; padding-left:0; }
+.pillars .num { font-size:11px; letter-spacing:0.1em; text-transform:uppercase; color:var(--charcoal); display:block; margin-bottom:6px; }
+.pillars .label { font-weight:600; font-size:15px; color:var(--navy); }
+
+.section-navy { padding:72px 0; background:var(--navy); color:var(--cream); }
+.section-navy .section-head h2 { color:var(--cream); }
+.section-navy .section-head .sub { color:#C7D0DA; }
+.section-navy .values-grid { border-top:1px solid rgba(247,243,234,0.22); border-left:1px solid rgba(247,243,234,0.22); }
+.section-navy .value-cell { border-right:1px solid rgba(247,243,234,0.22); border-bottom:1px solid rgba(247,243,234,0.22); }
+.section-navy .value-cell .num { color:#B9C6D6; }
+.section-navy .value-cell h4 { color:var(--cream); }
+.section-navy .value-cell p { color:#D8DEE6; }
+
+.section { padding:56px 0; border-bottom:1px solid var(--line); }
+.section-head { display:flex; justify-content:space-between; align-items:flex-end; gap:16px; margin-bottom:32px; }
+.section-head h2 { font-family:var(--heading); font-weight:700; font-size:24px; color:var(--navy); margin:0; }
+.section-head .sub { font-family:var(--heading); font-size:13px; color:var(--charcoal); max-width:30ch; text-align:right; }
+.card-grid { display:grid; grid-template-columns:repeat(2,1fr); border-top:1px solid var(--line); }
+.card { padding:24px; border-left:1px solid var(--line); border-bottom:1px solid var(--line); }
+.card:first-child { border-left:none; }
+.card-thumb { width:100%; aspect-ratio:4/3; background:var(--stone); margin-bottom:16px; display:flex; align-items:center; justify-content:center; font-family:var(--heading); font-size:11px; letter-spacing:0.06em; text-transform:uppercase; color:var(--charcoal); }
+.card h3 { font-family:var(--heading); font-size:17px; font-weight:700; color:var(--navy); margin:0 0 8px; }
+.card p { font-size:14px; margin:0; }
+
+.site-footer { padding:32px 0; font-family:var(--heading); font-size:12px; color:var(--charcoal); display:flex; justify-content:space-between; flex-wrap:wrap; gap:10px; }
+
+.prose { max-width: 72ch; margin: 0 auto; }
+.prose p { font-size: 17px; margin: 0 0 20px; }
+.values-grid { display:grid; grid-template-columns:repeat(4,1fr); border-top:1px solid var(--line); border-left:1px solid var(--line); }
+.value-cell { padding:24px; border-right:1px solid var(--line); border-bottom:1px solid var(--line); }
+.value-cell .num { font-family:var(--heading); font-size:11px; letter-spacing:0.1em; text-transform:uppercase; color:var(--charcoal); display:block; margin-bottom:10px; }
+.value-cell h4 { font-family:var(--heading); font-size:15px; font-weight:700; color:var(--navy); margin:0 0 8px; letter-spacing:0.02em; }
+.value-cell p { font-size:14px; margin:0; color:var(--charcoal); }
+@media (max-width:700px){
+  .values-grid { grid-template-columns:repeat(2,1fr); }
+  .pillars { grid-template-columns:1fr; }
+  .pillars div { border-left:none; border-top:1px solid var(--line); padding-top:14px; padding-left:0; }
+  .pillars div:first-child { border-top:none; }
+  .card-grid { grid-template-columns:1fr; }
+  .card { border-left:none !important; }
+}
+</style>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="wrap">
+    <a href="#" class="brand">
+      <svg class="brand-icon" viewBox="0 0 120 168" xmlns="http://www.w3.org/2000/svg"><g fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><rect x="30" y="8" width="60" height="7"/><rect x="26" y="15" width="10" height="14"/><rect x="84" y="15" width="10" height="14"/><line x1="26" y1="29" x2="94" y2="29"/><rect x="18" y="29" width="84" height="131"/><path d="M30 60 V45 a8 8 0 0 1 16 0 V60 Z"/><path d="M52 60 V45 a8 8 0 0 1 16 0 V60 Z"/><path d="M74 60 V45 a8 8 0 0 1 16 0 V60 Z"/><line x1="30" y1="60" x2="90" y2="60"/><rect x="30" y="74" width="24" height="30"/><line x1="42" y1="74" x2="42" y2="104"/><line x1="30" y1="89" x2="54" y2="89"/><rect x="66" y="74" width="24" height="30"/><line x1="78" y1="74" x2="78" y2="104"/><line x1="66" y1="89" x2="90" y2="89"/><line x1="18" y1="116" x2="102" y2="116"/><rect x="30" y="122" width="20" height="34"/><rect x="70" y="122" width="20" height="34"/><path d="M54 156 V132 a6 6 0 0 1 12 0 V156"/></g></svg>
+      <span class="brand-text">Kickstand<span class="brand-sub">Design Company</span></span>
+    </a>
+    <nav class="site-nav">
+      <a href="#">What We Do</a>
+      <a href="#">Floor Plans</a>
+      <a href="#">Articles</a>
+    </nav>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="wrap">
+    <p class="eyebrow">We created a company dedicated to designing homes that will be the most efficient and enjoyable investment you'll ever make.</p>
+    <h1>We design buildings that mix commercial and residential space, to provide ultimate flexibility and freedom in your life</h1>
+  </div>
+</section>
+
+<section class="section-navy">
+  <div class="wrap">
+    <div class="section-head" style="justify-content:flex-start;">
+      <p class="sub" style="font-size:24px; font-weight:700; color:var(--cream); text-align:left; max-width:none; font-family:var(--heading);">The four design principles behind every Kickstand building.</p>
+    </div>
+    <div class="values-grid">
+      <div class="value-cell">
+        <span class="num">01</span>
+        <h4>Studio</h4>
+        <p>Some ways we've pivoted residential design are through identifying key design elements that create magic in your home, allowing special spaces to be front and center. We call this your studio — the heart of your home, whatever that special thing is for you.</p>
+      </div>
+      <div class="value-cell">
+        <span class="num">02</span>
+        <h4>Commercial</h4>
+        <p>We incorporate a commercial or business-professional space, integrated into your residence, so you have the flexibility to create income at your doorstep — buildings that mix commercial and residential space to provide ultimate flexibility and freedom in your life.</p>
+      </div>
+      <div class="value-cell">
+        <span class="num">03</span>
+        <h4>Entertainment</h4>
+        <p>Whether you're introverted or extroverted, having a great space for your friends and family means everyone feels comfortable.</p>
+      </div>
+      <div class="value-cell">
+        <span class="num">04</span>
+        <h4>Secondary Suite</h4>
+        <p>A space that you can grow into.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap prose">
+    <p>Our company was born from a desire to explore residential designs that stretch the boundaries of what we typically see.</p>
+    <p>We are challenging ourselves to recreate residential design, using the best designs of the past that have been forgotten while using modern design that reflects our current social and economic lives.</p>
+    <p>Our goal is to make your home more functional, more lush, and more equipped, ultimately making a home that you want to create in, entertain in, and stay in.</p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap">
+    <div class="section-head">
+      <h2>Explore Kickstand</h2>
+    </div>
+    <div class="card-grid">
+      <div class="card">
+        <div class="card-thumb">Floor Plans</div>
+        <h3>Floor Plan Inspiration</h3>
+        <p style="font-size:13px; color:var(--charcoal);">Hire me to make you a custom home, built on your property, with your studio and your interests.</p>
+      </div>
+      <div class="card">
+        <div class="card-thumb">Articles</div>
+        <h3>Read our articles</h3>
+        <p>Notes on materials, layouts, and the products we keep specifying on real projects.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="wrap" style="display:flex; justify-content:space-between; width:100%; flex-wrap:wrap; gap:10px;">
+    <span>&copy; 2026 Kickstand Design Company</span>
+    <span>Some links on this site are affiliate links.</span>
+  </div>
+</footer>
+
+</body>
+</html>
